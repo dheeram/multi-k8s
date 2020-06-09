@@ -29,7 +29,7 @@ pgClient
 // Redis Client Setup
 const redis = require('redis');
 console.log('************************');
-console.log(kyes);
+console.log(keys);
 console.log('************************');
 const redisClient = redis.createClient({
   host: keys.redisHost,
