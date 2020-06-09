@@ -14,6 +14,10 @@ function fib(index) {
 }
 
 sub.on('message', (channel, message) => {
+  console.log('****************************');
+  console.log('Before calculating fib value ');
   redisClient.hset('values', message, fib(parseInt(message)));
+  console.log('After calculating fib value ', fib(parseInt(message)));
+  console.log('****************************');
 });
 sub.subscribe('insert');
